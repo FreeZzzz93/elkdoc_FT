@@ -4,10 +4,8 @@ pipeline {
   stages {
     stage('UP and BUILD') {
       steps {
-        dir ('//docker//elkdoc') {
-	      	sh 'touch 111'         
+        sh 'cp * /docker/elkdoc'         
         }
-      }
-    }
+    }    
   }
 }

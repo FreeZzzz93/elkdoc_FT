@@ -4,9 +4,11 @@ pipeline {
   stages {
     stage('UP and BUILD') {
       steps {
-        sh '/docker/elkdoc/docker-compose up --build'
+        dir ('/docker/elkdoc') {
+	      	sh 'docker-compose up --build'         
         }
       }
+    }
     stage('show UP') {
       steps {
         sh 'docker ps -a'

@@ -2,9 +2,19 @@ pipeline {
   agent {label 'master'}
 
   stages {
-    stage('UP and BUILD') {
+    stage('########### Copy from Git ###########') {
       steps {
         sh 'cp -r * /docker/elkdoc'         
+        }
+    }
+        stage('########### UP and BUILD ###########') {
+      steps {
+        sh 'docker-compose up --build'         
+        }
+    }
+        stage('########### Check containers status ###########') {
+      steps {
+        sh 'docker ps -a'         
         }
     }    
   }

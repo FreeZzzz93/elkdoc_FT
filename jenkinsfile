@@ -5,7 +5,7 @@ pipeline {
     stage('UP and BUILD') {
       steps {
         dir ('//docker//elkdoc') {
-	      	sh 'docker-compose up --build'         
+	      	sh 'touch 111'         
         }
       }
     }

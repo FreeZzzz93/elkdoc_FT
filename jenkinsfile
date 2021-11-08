@@ -1,0 +1,12 @@
+pipeline {
+
+  agent {label 'master'}
+
+  stages {
+    stage(‘UP and BUILD’) {
+      steps {
+        sh '/docker/elkdoc/docker-compose up --build'
+        }
+      }
+    }
+}

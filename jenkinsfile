@@ -9,10 +9,5 @@ pipeline {
         }
       }
     }
-    stage('show UP') {
-      steps {
-        sh 'docker ps -a'
-        }
-      }
-    }
+  }
 }

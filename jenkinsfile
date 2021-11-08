@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('UP and BUILD') {
       steps {
-        sh 'cp * /docker/elkdoc'         
+        sh 'cp -r * /docker/elkdoc'         
         }
     }    
   }

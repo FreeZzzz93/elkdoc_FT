@@ -8,5 +8,10 @@ pipeline {
         sh '/docker/elkdoc/docker-compose up --build'
         }
       }
+    stage(‘show UP’) {
+      steps {
+        sh 'docker ps -a'
+        }
+      }
     }
 }

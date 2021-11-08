@@ -1,14 +1,13 @@
 pipeline {
-
   agent {label 'master'}
 
   stages {
-    stage(‘UP and BUILD’) {
+    stage('UP and BUILD') {
       steps {
         sh '/docker/elkdoc/docker-compose up --build'
         }
       }
-    stage(‘show UP’) {
+    stage('show UP') {
       steps {
         sh 'docker ps -a'
         }

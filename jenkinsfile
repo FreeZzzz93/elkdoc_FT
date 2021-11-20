@@ -9,7 +9,9 @@ pipeline {
     }
         stage('########### UP and BUILD ###########') {
       steps {
-        sh 'docker-compose up -d --build'         
+        sh 'pwd'
+        sh 'docker-compose up -d --build'
+        sh 'pwd'         
         }
     }
         stage('########### Check containers status ###########') {
